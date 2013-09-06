@@ -9,10 +9,8 @@ get '/' do
 end
 
 post '/' do
-  if params[:payload]
-    payload = JSON.parse(request.body.read)
-    TextMessage.new(payload, PHONE_NUMBERS).alert
-  end
+  payload = JSON.parse(request.body.read)
+  TextMessage.new(payload, PHONE_NUMBERS).alert
 end
 
 class TextMessage
