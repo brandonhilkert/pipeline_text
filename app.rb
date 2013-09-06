@@ -10,7 +10,7 @@ end
 
 post '/' do
   if params[:payload]
-    payload = JSON.parse(JSON.parse(request.body.read))
+    payload = JSON.parse(request.body.read)
     TextMessage.new(payload, PHONE_NUMBERS).alert
   end
 end
@@ -28,7 +28,6 @@ class TextMessage
   # }
   #
   def initialize(payload, numbers)
-    puts payload
     @payload, @numbers = payload, numbers
   end
 
