@@ -28,6 +28,7 @@ class TextMessage
   # }
   #
   def initialize(payload, numbers)
+    puts payload
     @payload, @numbers = payload, numbers
   end
 
