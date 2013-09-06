@@ -1,19 +1,16 @@
-Sinatra Classic Template
+Pipeline Text
 ========================
 
-This is a template for a basic Sinatra Classic application. It uses Bundler to manage dependencies and ERB for views.
-
-The template includes a blank "style.css" stylesheet to include application-specific CSS and includes jQuery from the Google CDN.
-
-Hope this gets you up and running fast!
+This micro app servers as a webhook receive for New Relic to send text notifications through Twilio's API to members of your team.
 
 Usage
 -----
 
-````Bash
-  bundle install
-  ruby app.rb
-````
+Need to set the following ENV vars:
+
+* TWILIO_SID
+* TWILIO_TOKEN
+* TWILIO_NUMBER
 
 Copyright
 ---
