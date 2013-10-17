@@ -13,7 +13,8 @@ get '/' do
 end
 
 post '/' do
-  payload = JSON.parse(request.body.read)
+  body = params[:alert] || params[:deployment]
+  payload = JSON.parse(body)
   TextMessage.new(payload, PHONE_NUMBERS).alert
 end
 
